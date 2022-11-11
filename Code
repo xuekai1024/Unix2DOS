@@ -1,1 +1,17 @@
+my @allfile = glob ‘*.txt’;
 
+foreach $file(@allfile){
+
+my $content;
+
+open(in,"+<$file")or die “Cannot open $file ,check $file properties”;
+
+$content .= $_ while ;
+
+open (OUTFILE,">$file");
+
+print OUTFILE “$content” or die “Unable to write”;
+
+close (in)or die “Cannot close”;
+
+}
